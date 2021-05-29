@@ -1,5 +1,8 @@
 package com.indracompany.treinamento.model.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.indracompany.treinamento.exception.AplicacaoException;
@@ -31,6 +34,22 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 	  
 	  private boolean cpfEhValido(String cpf) {
 		  return CpfUtil.validaCPF(cpf);
+	  }
+
+	  public List<ClienteDTO> buscarClientePorNome(String nome) {
+		  List<Cliente> clientes = getRepository().findByNomeIgnoreCase(nome);
+		  List<ClienteDTO> listaRetorno = new ArrayList<>();
+		  if (clientes != null) {
+			  for (Cliente cli : clientes) {
+				  ClienteDTO dto = new ClienteDTO();
+				  dto.setEmail(cli.getEmail());
+				  dto.setNome(cli.getNome());
+				  dto.setCpf(cli.getCpf());
+				  dto.setId(cli.getId());
+				  listaRetorno.add(dto);
+			  }
+		  }
+		  return listaRetorno;
 	  }
 	  
 }
