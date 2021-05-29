@@ -23,6 +23,10 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		  
 		  Cliente cli = getRepository().findByCpf(cpf);
 		  
+		  if (cli == null) {
+			  throw new AplicacaoException(ExceptionValidacoes.ALERTA_NENHUM_REGISTRO_ENCONTRADO, "CPF");
+		  }
+		  
 		  ClienteDTO retorno = new ClienteDTO();
 		  retorno.setEmail(cli.getEmail());
 		  retorno.setNome(cli.getNome());

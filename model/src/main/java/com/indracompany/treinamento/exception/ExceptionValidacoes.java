@@ -25,6 +25,8 @@ public enum ExceptionValidacoes implements AplicacaoExceptionValidacoes {
   ERRO_ACESSO_NEGADO_JIRA("msg.erro.acesso.negado.jira", null, AplicacaoExceptionValidacoes.SEVERIDADE_ERRO),
   ERRO_LOGIN_SENHA_INVALIDO("msg.erro.login.senha.invalido", null, AplicacaoExceptionValidacoes.SEVERIDADE_ERRO),
   ERRO_CPF_INVALIDO("msg.erro.cpf.invalido", null, AplicacaoExceptionValidacoes.SEVERIDADE_ERRO),
+  ERRO_CONTA_INVALIDA("msg.erro.conta.invalida", null, AplicacaoExceptionValidacoes.SEVERIDADE_ERRO),
+  ERRO_SALDO_INEXISTENTE("msg.erro.saldo.inexistente", null, AplicacaoExceptionValidacoes.SEVERIDADE_ERRO),
   
 
   // Mensagens Alterta

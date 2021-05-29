@@ -18,7 +18,7 @@ public interface ContaBancariaRepository extends GenericCrudRepository<ContaBanc
 	List<ContaBancaria> buscarContasDoClienteJpql (@Param("cli") Cliente cli);
 	
 	@Query(value = "select con.* from  clientes cli, contas con "
-			+ "where cli.id=cont.fk_cliente_id and cli.id = :idCliente", nativeQuery = true)
+			+ "where cli.id=con.fk_cliente_id and cli.id = :idCliente", nativeQuery = true)
 	List<ContaBancaria> buscarContasPorClienteSql (@Param("idCliente")Long idCliente);
 	
 }
