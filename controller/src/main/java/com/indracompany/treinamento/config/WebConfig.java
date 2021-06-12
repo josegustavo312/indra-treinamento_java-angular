@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
@@ -30,6 +31,12 @@ public class WebConfig extends WebMvcConfigurationSupport {
     registry.addResourceHandler("/templates/**").addResourceLocations("/templates/");
     registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
     registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/").setCachePeriod(0);
+  }
+  
+  @Override
+  public void addCorsMappings(CorsRegistry registry) {
+      registry.addMapping("/**")
+              .allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH");
   }
 
   @Override
