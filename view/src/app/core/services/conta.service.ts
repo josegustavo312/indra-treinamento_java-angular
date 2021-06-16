@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ContaDTO } from '../dtos/conta.dto';
+import { DepositoDTO } from '../dtos/deposito.dto';
 import { ApiService } from './api.service';
 
 @Injectable({
@@ -23,6 +24,10 @@ export class ContaService {
 
     create(obj: ContaDTO): Observable<any> {
         return this.apiService.post(`${this.controller}/`, obj);
+    }
+
+    deposito(obj: DepositoDTO): Observable<any> {
+        return this.apiService.post(`${this.controller}/deposito`, obj);
     }
 
     update(obj: ContaDTO): Observable<any> {
