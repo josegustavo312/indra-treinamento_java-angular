@@ -3,6 +3,8 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ContaDTO } from '../dtos/conta.dto';
 import { DepositoDTO } from '../dtos/deposito.dto';
+import { SaqueDTO } from '../dtos/saque.dto';
+import { TransferenciaDTO } from '../dtos/transferencia.dto';
 import { ApiService } from './api.service';
 
 @Injectable({
@@ -28,6 +30,14 @@ export class ContaService {
 
     deposito(obj: DepositoDTO): Observable<any> {
         return this.apiService.post(`${this.controller}/deposito`, obj);
+    }
+
+    saque(obj: SaqueDTO): Observable<any> {
+        return this.apiService.post(`${this.controller}/saque`, obj);
+    }
+
+    transferencia(obj: TransferenciaDTO): Observable<any> {
+        return this.apiService.post(`${this.controller}/transferencia`, obj);
     }
 
     update(obj: ContaDTO): Observable<any> {
