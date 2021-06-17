@@ -13,6 +13,7 @@
               <th>Agência</th>
               <th>Número</th>
               <th>Cliente</th>
+              <th>Saldo</th>
               <th class="table-columns-acoes">Ações</th>
             </tr>
           </ng-template>
@@ -21,6 +22,7 @@
               <td>{{item.agencia}}</td>
               <td>{{item.numero}}</td>
               <td>{{item.cliente.nome}}</td>
+              <td>{{item.saldo}}</td>
               <td class="table-columns-acoes">
                 <button type="button" class="btn btn-default btn-sm mr-1" title="Editar" (click)="update(item.id)">
                   <i class="fas fa-pencil-alt"></i>
