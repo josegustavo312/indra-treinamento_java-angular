@@ -12,6 +12,7 @@ import { ContaComponent } from './pages/conta.component';
 import { ContaDepositarComponent } from './pages/conta-depositar/conta-depositar.component';
 import { ContaSacarComponent } from './pages/conta-sacar/conta-sacar.component';
 import { ContaTransferirComponent } from './pages/conta-transferir/conta-transferir.component';
+import { ContaConsultarClienteComponent } from './pages/conta-consultar-cliente/conta-consultar-cliente.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ContaTransferirComponent } from './pages/conta-transferir/conta-transfe
     ContaDepositarComponent,
     ContaSacarComponent,
     ContaTransferirComponent,
+    ContaConsultarClienteComponent,
   ],
   imports: [
     CommonModule,

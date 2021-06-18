@@ -6,6 +6,7 @@ import { ContaSacarComponent } from './pages/conta-sacar/conta-sacar.component';
 import { ContaTransferirComponent } from './pages/conta-transferir/conta-transferir.component';
 import { ContaListarComponent } from './pages/conta-listar/conta-listar.component';
 import { ContaComponent } from './pages/conta.component';
+import { ContaConsultarClienteComponent } from './pages/conta-consultar-cliente/conta-consultar-cliente.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'transferir',
         component: ContaTransferirComponent
+      },
+      {
+        path: 'consultar-cliente',
+        component: ContaConsultarClienteComponent
       },
       {
         path: 'editar/:id',

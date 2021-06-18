@@ -24,6 +24,10 @@ export class ContaService {
         return this.apiService.get(`${this.controller}/${id}/`).pipe(map(response => new ContaDTO(response.body)));
     }
 
+    getByCpf(cpf: string): Observable<ContaDTO[]> {
+        return this.apiService.get(`${this.controller}/consultar-contas-cliente/${cpf}/`).pipe(map(response => response.body.map(item => new ContaDTO(item))));
+    }
+
     create(obj: ContaDTO): Observable<any> {
         return this.apiService.post(`${this.controller}/`, obj);
     }

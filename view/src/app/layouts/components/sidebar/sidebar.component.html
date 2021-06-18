@@ -36,6 +36,12 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
+              <a [routerLink]="['/conta']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Gerenciar</p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a [routerLink]="['/conta/cadastrar']" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Cadastrar</p>
@@ -60,9 +66,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/conta']" class="nav-link">
+              <a [routerLink]="['/conta/consultar-cliente']" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Gerenciar</p>
+                <p>Consultar Cliente</p>
               </a>
             </li>
           </ul>
