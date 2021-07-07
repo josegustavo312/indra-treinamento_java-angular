@@ -1,70 +1,73 @@
-**SOBRE O QUE É O PROJETO?**
-========================================================================
-O objetivo do projeto é servir de base para o treinamento de "Formação Java/Angular para Jovens Profissionais", da Indra, unidade de João Pessoa, 
-ministrado por Eder Ferreira (efmendes@indracompany.com) e Arthur Leony (aldantas@indracompany.com)
+## :rocket: Indra - Treinamento Java + Angular
+
+### :art: Layout
+
+<div align="center">
+  <img alt="Tela" title="#Tela" width="100%" height="auto" src="./README/layout.png" />
+</div>
+
+----------
+
+### :hammer_and_wrench: Ferramentas
+As seguintes tecnologias foram utilizadas na construção do projeto:
+- Java:
+  - IDE - Spring Tool Suite 4;
+  - Swagger;
+- Angular:
+  - IDE - Visual Studio Code;
+  - Service;
+  - Module;
+  - Routing;
+  - TypeScript.
 
 
-**Conteúdo do Treinamento**
+----------
 
-- Git
-- Lombok 
-- Criando um projeto Spring 
-- Maven 
-- Spring Boot 
-- Api (Rest)
-- Swagger 
-- JPA (Hibernate) 
-- Spring Data 
-- MySQL
+###  :computer: Servidor de Desenvolvimento
 
+Para clonar o repositório do git:
+1. git remote add origin git remote add origin https://github.com/josegustavo312/indra-treinamento_java-angular.git
+2. git branch -M main
+3. git push -u origin main
 
-**COMO CONSTRUIR O AMBIENTE**
-========================================================================
+Angular:
 
-Baixar e instalar o Lombok na sua IDE em https://projectlombok.org/download.
-Acessar o diretório onde o lombok.jar foi baixado e executar no terminal: java -jar lombok.jar.
-Na janela de instalação, especificar o caminho onde se encontra sua IDE e concluir a instalação.
+- Instalar o Angular CLI no projeto:
+  - npm install -g @angular/cli
+- Instalar as dependências:
+  - npm install
+- Executar o projeto:
+  - ng serve
+- Porta de desenvolvimento:
+  - http://localhost:4200
 
-Caso não consiga instalar através da interface, copiar o lombok.jar para o diretório do eclipse e editar o arquivo eclipse.ini e incluir a linha abaixo no final do arquivo:
+API REST:
 
--javaagent:/DIRETÓRIO_QUE_VOCE_COPIOU_O_LOMBOK.JAR/lombok.jar
+- Arquivo de configuração do banco:
+  - treinamento_202105\controller\src\main\resources\application.yml
+  
+- Executar o Spring Boot App:
+  1. treinamento_202105\controller\src\main\java\com\indracompany\treinamento\AppConfig.java
+  2. Run As
+  3. Spring Boot App
 
-**Back-End**
+- Swagger UI:
+  - http://localhost:8080/treinamento/swagger-ui.html#/
 
-	Primeiramente deve-se clonar o repositório no endereço:
-	
-	https://github.com/efmendes/treinamento_202105.git
-	
-	Após o projeto ser clonado, abra o terminal no diretório clonado **treinamento**
-	e utilize os seguintes comandos:
+----------
 
-	
-	mvn install
-	../treinamento-controller/target
-	java -jar treinamento.war
-	
-	
-**É de suma importância aguardar a execução dos comandos acima citados.**
+###  :gear: Funções
+- [x] Conta bancária:
+  - [x] Gerenciar;
+  - [x] Cadastrar;
+  - [x] Depositar;
+  - [x] Sacar;
+  - [x] Transferir;
+  - [x] Consultar Cliente.
 
-========================================================================
+----------
 
-
-Para acesso à sua API desenvolvida, utilize o endereço: http://localhost:8080/treinamento
-
-
-
-
-Voce pode desenvolver utilizando os recursos abaixo:
-========================================================================
-- Java 11
-- Maven
-
-Banco de dados
-========================================================================
-
-Como acessar o client do MySQL:
-
-	
-	JDBC URL: jdbc:mysql://localhost:3306/treinamentoindra
-    Usuário: root
-	Senha: vertrigo
+###  :eyeglasses: Autor
+José Gustavo da Silva.
+<br/>
+<a href="https://www.linkedin.com/in/jose-gustavo312/"><img alt="LinkedIn" title="#LinkedIn" width="48" height="auto" src="https://raw.githubusercontent.com/josegustavo312/josegustavo312/main/README/linkedin.png"/></a>
